@@ -1,6 +1,9 @@
 package com.example.testlibrary;
 
 
+import com.blankj.utilcode.util.ToastUtils;
+
+
 public final class TestApi {
 
     private static volatile TestApi mInstance;
@@ -10,6 +13,7 @@ public final class TestApi {
             synchronized (TestApi.class) {
                 if (mInstance == null) {
                     mInstance = new TestApi();
+                    ToastUtils.showLong("我是吐司");
                 }
             }
         }
